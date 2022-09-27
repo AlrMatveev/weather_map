@@ -30,8 +30,6 @@ function Map({ startCoords, setCoords }) {
       resize([window.innerWidth, window.innerHeight]);
     });
 
-    const controls = size[0] < 500 ? ["zoomControl"] : [];
-
     function init() {
       myMap.innerHTML = "";
       ymaps.ready(function () {
@@ -40,7 +38,7 @@ function Map({ startCoords, setCoords }) {
           center: startCoords,
           zoom: 5,
           type: "yandex#hybrid",
-          controls: controls,
+          controls: [],
         });
 
         dispatch(fetchWeather(map.getCenter()));
@@ -49,7 +47,7 @@ function Map({ startCoords, setCoords }) {
         map.behaviors.disable("rightMouseButtonMagnifier");
         map.behaviors.disable("dblClickZoom");
         //map.behaviors.disable("scrollZoom");
-        map.behaviors.disable("multiTouch");
+        //map.behaviors.disable("multiTouch");
 
         // // Создаем метку
         // var placemark = new ymaps.Placemark(
