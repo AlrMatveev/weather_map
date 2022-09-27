@@ -47,7 +47,7 @@ function Map({ startCoords, setCoords }) {
         map.behaviors.disable("rightMouseButtonMagnifier");
         map.behaviors.disable("dblClickZoom");
         //map.behaviors.disable("scrollZoom");
-        map.behaviors.disable("multiTouch");
+        //map.behaviors.disable("multiTouch");
 
         // // Создаем метку
         // var placemark = new ymaps.Placemark(
